@@ -1,8 +1,11 @@
 
+#  importing the regular expressions library
 import re 
 
+# Lexer class to generate tokens
 class Lexer(object):
 
+    # Initializing the Source code
     def __init__(self, source_code):
         self.source_code = source_code
 
@@ -50,6 +53,7 @@ class Lexer(object):
             #incrementing index
             source_index += 1   
         
+        # Printing tokens
         print(tokens)
 
         # Return created tokens
