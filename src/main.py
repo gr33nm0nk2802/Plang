@@ -8,22 +8,23 @@ def main():
     with open('test.lang','r') as file:
         content = file.read()
     
+    ############################
+    #         Lexer            #
+    ############################
 
-    #
-    #   Lexer
-    #
-
-    # Calling the lexer class and initializing it with the source code
+    # Calling the lexer file Lexer class and initializing it with the source code
     lex = lexer.Lexer(content)
-    #Calling the tokenize method from inside the lexer instance
+    # Calling the tokenize method from inside the lexer instance
     tokens= lex.tokenize()
 
-    #
-    # Parser
-    #
+    ############################
+    #         Parser           #
+    ############################
 
+    # Calling the parser file Parser class and initializing it with the source code
     parse = parser.Parser(tokens)
-    obj=parse.parse()
+    # Calling the parse method from inside the parse instance
+    parse.parse()
 
 main()
 
